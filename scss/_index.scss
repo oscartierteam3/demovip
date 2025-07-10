@@ -1,0 +1,318 @@
+:root {
+  --selection-height: 50px;
+}
+.nav-group {
+  position: relative;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(30%, 559px);
+  height: auto;
+  &__logo {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: min(9vw, 30px);
+    margin-top: min(9vw, 30px);
+  }
+  &__slogon{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: min(9vw, 60px);
+  }
+}
+.btn-menu-list {
+  display: none;
+  flex-shrink: 0;
+  width: 20%;
+  border: 1px solid #15579a;
+  border-radius: 1rem;
+  padding: min(1.5rem, 24px);
+  background: #080a23;
+  opacity: 0;
+  .nav-dec{
+    padding-bottom: 1rem;
+    margin-top: 0px;
+  }
+  &.-img{
+    width: auto;
+  }
+  &.active{
+    display: block;
+    opacity: 1;
+  }
+}
+.btn-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  &__ms {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #15579a;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .ms-sign {
+    flex-shrink: 0;
+    width: min(1.5vw, 9px);
+    height: min(1.5vw, 9px);
+    margin-right: 2px;
+    border-radius: 50%;
+    background: #6bf63a;
+  }
+  .ms-text {
+    padding-left:4px;
+    margin-left:auto;
+    font-size: 16px;
+    color: #a6a7c5;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    padding: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(#173669, #0a0c26, #132c54);
+  }
+  .link-icon {
+    margin-right: 8px;
+    &__img{
+      width: 16px;
+    }
+  }
+  .link-title {
+    font-size: .875rem;
+  }
+  &__btn {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 24px;
+    color: #a6a7c5;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: linear-gradient(#204369, #080a23, #204369);
+    box-shadow: inset 1px 1px 5px #378eff, inset -1px -5px 8px #3366a8;
+    text-decoration: none;
+    &:hover{
+      color: #ffffff;
+      background:linear-gradient(#2965f8 20%,#0030d0 50%,#2965f8 70%);
+      box-shadow: inset 1px 1px 5px #378eff, inset -1px -5px 8px #378eff;
+    }
+    &.active{
+      color: #ffffff;
+      background:linear-gradient(#2965f8 20%,#0030d0 50%,#2965f8 70%);
+      box-shadow: inset 1px 1px 5px #378eff, inset -1px -5px 8px #378eff;
+    }
+  }
+}
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding: 12px 16px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  color: #a6a7c5;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  white-space: nowrap;
+  border: 1px solid #00a2ff00;
+  background: #1c1f3b;
+  text-decoration: none;
+  &__item{
+    display: flex;
+    align-items: center;
+  }
+  .item-icon {
+    width: 32px;
+    margin-right: 8px;
+    &__img{
+      width: 100%; 
+      &-active{
+        width: 100%;
+        display: none;
+      }
+    }
+    
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover{
+    color: #ffffff;
+    border: 1px solid #00a2ff;
+    box-shadow: inset 1px 1px 5px #378eff, inset -1px -1px 5px #378eff,
+        -1px -1px 8px #378eff, 1px 1px 8px #378eff;
+    background: linear-gradient(#225b98, #080a23);
+    .item-icon{
+      &__img{
+        display: none;
+        &-active{
+          display: block;
+        }
+      }
+      
+    }
+  }
+}
+.menu-img{
+  width: 15rem;
+  margin: auto;
+  &__img{
+    width: 100%;
+  }
+}
+.menu-img + .btn-cancle{
+  padding-top: 24px;
+}
+.btn-group {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .btn-icon{
+      width: 67%;
+      img{
+        width: 100%;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+    &__title {
+      padding-left: 1rem;
+      color: #a6a7c5;
+      font-weight: 600;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    &:hover{
+      filter: saturate(2);
+    }
+    &.active{
+      color: #ffffff;
+      border: 1px solid #00a2ff;
+      box-shadow: inset 1px 1px 5px #378eff, inset -1px -1px 5px #378eff,
+        -1px -1px 8px #378eff, 1px 1px 8px #378eff;
+      background: linear-gradient(#225b98, #080a23);
+      &:nth-child(1) {
+        &::before {
+          background-image: url('../images/icon-home-active.png');
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          background-image: url('../images/icon-support-active.png');
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background-image: url('../images/icon-cellphone-active.png');
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          background-image: url('../images/icon-popular-active.png');
+        }
+      }
+    }
+  }
+}
+
+.nav-dec{
+  text-align: center;
+  font-size: .875rem;
+  color:#a6a7c5;
+  line-height:1.5;
+  margin-top: 16px;
+  a{
+    color:#a6a7c5;
+    text-decoration: none;
+  }
+}
+.nav-dec-img{
+  width: 67%;
+  margin: 0 auto;
+}
+.btn-cancle{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  color: #a6a7c5;
+  border: none;
+  background-color: transparent;
+}
+.modal-mask{
+  position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(#000000,0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  &.active{
+    opacity: 1;
+    z-index: 1;
+  }
+}
+.modal-dec{
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  &__img{
+    width: 100%;
+  }
+}
+@media (max-width:1280px){
+  .btn-menu-list{
+    min-width: 25%;
+  }
+  .nav-group{
+    left: 12%;
+    width:min(33%, 450px);
+    &__logo{
+      margin-bottom: min(9vw, 28px);
+    }
+    &__slogon{
+      margin-bottom: min(12vw, 52px);
+    }
+    .btn-group{
+      .btn-icon{
+        width: 70%;
+      }
+    }
+  }
+  .nav-dec-img{
+    width: 70%;
+  }
+}
